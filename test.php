@@ -8,13 +8,14 @@
 // echo $_REQUEST['pass'] . "<br>";
 
 include('config.php');
+include('header.php');
 
 if (isset($_POST['submit'])) {
     $name =$_POST['name'];
     $email =$_POST['email'];
     $pass =$_POST['pass'];
 
-    $query="INSERT INTO `register-form` (`name`,`email`,`password`) VALUES ('$name','$email','$pass') ";
+    $query="INSERT INTO `form` (`name`,`email`,`password`) VALUES ('$name','$email','$pass') ";
 
     $result=mysqli_query($connection,$query);
 }
