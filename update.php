@@ -29,16 +29,16 @@ if (mysqli_num_rows($query)>0) {
 </head>
 <body>
     <div class="container mt-4">
-<form action="test.php" method='POST' class='form-group'>
+<form action="updateData.php" method='POST' class='form-group'>
         <label for="name">Name</label>
-        <input type="hidden" name='name' required value='<?php echo $row['id']?>' class='form-control'>
-        <input type="text" name='name' required class='form-control' value='<?php echo $row['Name']?>'>
+        <input type="hidden" name='id' required value='<?php echo $row['id']?>' class='form-control'>
+        <input type="text" name='name' required class='form-control' value='<?php echo $row['name']?>'>
         <br>
         <label for="email">Email</label>
-        <input type="email" name='email' required class='form-control' value='<?php echo $row['Email']?>'>
+        <input type="email" name='email' required class='form-control' value='<?php echo $row['email']?>'>
        
         <br>
-        <input type="submit" value="register" class='btn btn-success'>
+        <input type="submit" value="register" name='update' class='btn btn-success'>
         </div>
 
         <?php
