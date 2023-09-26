@@ -2,7 +2,7 @@
 include('header.php');
 require('config.php');
 
-$retriveData="SELECT * from `form` where status='1'";
+$retriveData="SELECT * from `form` where status='0'";
 $sqlQuery=mysqli_query($connection,$retriveData);
 if ($sqlQuery) {
     // print_r($sqlQuery);
@@ -50,8 +50,8 @@ if ($sqlQuery) {
       <th scope="row"><?php  echo $row['id']?></th>
       <td><?php  echo $row['name']?></td>
       <td><?php  echo $row['email']?></td>
-      <td><a href="update.php?id=<?php echo $row['id']?>">Update</a></td>
-      <td><a href="trash.php?id=<?php echo $row['id']?>">trash</a></td>
+      <td><a href="restore.php?id=<?php echo $row['id']?>">restore</a></td>
+      <td><a href="delete.php?id=<?php echo $row['id']?>">Delete</a></td>
       
       
       
